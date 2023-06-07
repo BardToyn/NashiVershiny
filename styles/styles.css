@@ -1,0 +1,366 @@
+:root {
+	--cntr: center;
+	--blck: block;
+	--cvr: cover;
+	--none: none;
+	--normal: normal;
+	--max-proc: 100%;
+	--fixed: fixed;
+	--flex: flex;
+	--column: column;
+	--spacebet: space-between;
+	--clr-white: #fff;
+	--clr-black: #000;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/Montserrat-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Thin.woff2") format("woff2"),
+    url("../fonts/Montserrat-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"),
+    url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+	font-weight: 200;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+	font-weight: var(--normal);
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: var(--normal);
+    font-display: swap;
+}
+
+body {
+	font-family: 'Montserrat';
+	font-weight: var(--normal);
+	font-style: var(--normal);
+	line-height: 22px;
+}
+
+button {
+	outline: var(--none);
+	border: var(--none);
+	cursor: pointer;
+	font-size: 0.8vw;
+	line-height: 0.8vw;
+}
+
+a {
+	text-decoration: var(--none);
+	font-size: 1vw;
+}
+
+p {
+	margin: 0;
+	font-size: 1vw;
+	line-height: 1vw;
+}
+
+h1 {
+	margin: 0;
+	font-size: 10vw;
+	line-height: 10vw;
+}
+
+/*HEADER*/
+
+.header {
+	position: var(--fixed);
+	top: 0;
+	right: 0;
+	width: var(--max-proc);
+	height: auto;
+	transition: 0.3s ease-in-out;
+	z-index: 10;
+}
+
+.header-active {
+	position: var(--fixed);
+	top: 0;
+	right: 0;
+	width: var(--max-proc);
+	height: auto;
+	z-index: 10;
+	box-shadow: 0px 5px 13px -8px rgba(34, 60, 80, 0.35);
+	color: var(--clr-black);
+	background-color: var(--clr-white);
+}
+
+.header-active a {
+	color: var(--clr-black);
+}
+
+.header-active-mob {
+	background-color: var(--clr-white);
+}
+
+.header-active-mob a {
+	color: var(--clr-black);
+}
+
+.fixed-menu {
+	padding: 10px 5%;
+	display: var(--flex);
+	justify-content: var(--spacebet);
+	align-items: var(--cntr);
+}
+
+.fixed-menu_img {
+	height: 85px;
+}
+
+.fixed-menu_link {
+	display: inline-block;
+	color: var(--clr-white);
+	transition: 0.3s ease-in-out;
+}
+
+.fixed-menu_link:hover {
+	transform: scale(1.1);
+}
+
+.fixed-menu_link:not(:last-child) {
+	margin-right: 30px;
+}
+
+.fixed-menu_number {
+	display: inline-block;
+	color: var(--clr-white);
+	transition: 0.3s ease-in-out;
+}
+
+.fixed-menu_number:hover {
+	transform: scale(1.1);
+}
+
+.mobile-menu {
+	display: var(--none);
+}
+
+.burger-btn {
+	width: 30px;
+	height: 30px;
+}
+
+#menu_checkbox {
+	display: var(--none);
+}
+
+label {
+	position: absolute;
+	right: 5%;
+    bottom: 5px;
+	display: var(--blck);
+	width: 30px;
+	height: 30px;
+	transform: translateY(-50%);
+	transition: 0.3s ease transform;
+	cursor: pointer;
+}
+
+label .burger-line {
+	width: 4px;
+	height: 4px;
+	background-color: #143240;
+	margin-left: 0;
+	margin-bottom: 6px;
+	border-radius: 4px;
+	transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom,
+	0.3s ease background-color;
+}
+
+label .burger-line:first-child {
+	width: 22px;
+}
+
+label .burger-line:nth-child(2) {
+	width: 15px;
+}
+
+label .burger-line:last-child {
+	width: 30px;
+	margin-bottom: 0;
+}
+
+#menu_checkbox:checked + label {
+	transform: translateY(-50%) rotateZ(-90deg);
+}
+
+#menu_checkbox:checked + label .burger-line {
+	width: 4px;
+	margin-left: 12px;
+	margin-bottom: 3px;
+	background-color: #ffc107;
+}
+
+#menu_checkbox:checked ~ .main-menu {
+	max-height: 500px;
+	font-size: 14px;
+}
+
+.main-menu {
+	display: var(--blck);
+	position: absolute;
+	width: var(--max-proc);
+	bottom: 0;
+	left: 0;
+	box-shadow: 0px 5px 13px -8px rgba(34, 60, 80, 0.35);
+	transform: translateY(100%);
+	background-color: var(--clr-white);
+	max-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	transition: 0.3s ease-in-out;
+}
+
+.main-menu_link {
+	padding: 20px 0 0px;
+	display: var(--blck);
+	font-weight: 500;
+	font-style: var(--normal);
+	color: #143240;
+	text-align: var(--cntr);
+}
+
+.main-menu_link:last-child {
+	padding-bottom: 20px;
+}
+
+/*SWIPER*/
+
+.swiper {
+	width: var(--max-proc);
+}
+
+.swiper-slide {
+	display: var(--flex);
+	justify-content: var(--cntr);
+	align-items: var(--cntr);
+}
+
+.slide-one {
+	background: no-repeat url(../picture/slider-bg/background.webp) center center / cover;
+}
+
+.slide-two {
+	background: no-repeat url(../picture/slider-bg/voshozhdenie-na-elbrus-s-yuga-9-dnej.webp) center center / cover;
+}
+
+.slider-wrap {
+	height: 100vh;
+	display: var(--flex);
+	flex-direction: var(--column);
+	align-items: var(--cntr);
+	justify-content: var(--cntr);
+}
+
+.slider_text-wrap {
+
+	display: var(--flex);
+	align-items: left;
+}
+
+.slider-text_date {
+	font-style: var(--normal);
+	font-weight: 500;
+	color: var(--clr-white);
+}
+
+.slider-text_date:nth-child(2) {
+	margin: 0 auto 0 60px;
+}
+
+.slider-heading {
+	margin: 30px 0;
+	font-style: var(--normal);
+	font-weight: 800;
+	text-transform: uppercase;
+	color: var(--clr-white);
+}
+
+.slider-btn {
+	margin: 10% 0 25%;
+	padding: 24px 35px;
+	font-style: var(--normal);
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.3s ease-in-out;
+	color: var(--clr-white);
+	background-color: var(--clr-black);
+}
+
+.slider-btn:hover {
+	color: var(--clr-black);
+	background-color: var(--clr-white);
+}
+
+.slider-text {
+	width: 500px;
+	font-style: var(--normal);
+	font-weight: 400;
+	color: var(--clr-white);
+}
